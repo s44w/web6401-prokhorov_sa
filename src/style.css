@@ -1,5 +1,4 @@
 ﻿:root {
-    /* Основные цвета из исходного CSS */
     --color-green: green;
     --color-darkgreen: darkgreen;
     --color-blue: blue;
@@ -157,7 +156,7 @@ img {
     transform: translateY(-5px);
 }
 
-/* Стили для формы */
+/* формы */
 .neural-form {
     max-width: 500px;
     margin: 30px auto;
