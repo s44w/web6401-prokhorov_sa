@@ -1,0 +1,230 @@
+﻿:root {
+    --color-green: green;
+    --color-darkgreen: darkgreen;
+    --color-blue: blue;
+    --color-darkblue: darkblue;
+    --color-gray: gray;
+    --color-lightgray: lightgray;
+    --color-black: black;
+    --color-white: white;
+    --color-red: red;
+    
+    --border-color: var(--color-gray);
+    --text-muted: var(--color-gray);
+    --table-header: var(--color-lightgray);
+    --shadow-color: rgba(0,0,0,0.1);
+
+    --neuron-pulse_0: rgba(46, 139, 87, 0.7);
+    --neuron-pulse_70: rgba(46, 139, 87, 0);
+    --neuron-pulse_100: rgba(46, 139, 87, 0);
+}
+
+
+body {
+    font-family: Arial;
+    margin: 20px;
+    background: var(--color-white);
+}
+
+h1 {
+    color: var(--color-green);
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-darkgreen);
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: var(--color-green);
+}
+
+.menu a {
+    margin: 0 10px;
+    color: var(--color-blue);
+}
+
+.material {
+    border: 1px solid var(--color-gray);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.material a {
+    color: var(--color-darkblue);
+}
+
+table {
+    border: 1px solid var(--color-black);
+    width: 100%;
+    margin: 20px 0;
+}
+
+th {
+    background: var(--color-lightgray);
+    text-align: left;
+}
+
+td {
+    border: 1px solid var(--color-gray);
+    padding: 5px;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid var(--color-black);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--color-gray);
+}
+
+/* Flexbox стили */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+/* Grid стили */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.material-type {
+    display: inline-block;
+    background: var(--color-lightgray);
+    color: var(--color-darkgreen);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* анимация */
+@keyframes neuronPulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--neuron-pulse_0);
+    }
+    70% {
+        box-shadow: 0 0 0 10px var(--neuron-pulse_70);
+    }
+    100% {
+        box-shadow: 0 0 0 0 var(--neuron-pulse_100);
+    }
+}
+
+.grid-item:hover {
+    animation: neuronPulse 1.5s infinite;
+    transform: translateY(-5px);
+}
+
+/* формы */
+.neural-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--color-white);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-darkgreen);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-green);
+    box-shadow: 0 0 5px rgba(--shadow-color);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: var(--color-darkgreen);
+}
+
+.form-status {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--color-gray);
+    text-align: center;
+}
+.form-status.ok { color: var(--color-green); }
+.form-status.error { color:  var(--color-red); }

@@ -1,0 +1,30 @@
+{
+    "/train-config": {
+        "post": {
+        "data": {
+            "code": 200,
+            "status": "OK",
+            "message": "Config is downloading",
+            "taskId": 1
+        }
+        }
+  },
+    "/materials": {
+        "get": {
+            "data": [
+            { 
+                "id": 1, 
+                "title": "U-Net segmentation", 
+                "type": "article", 
+                "url": "/python_projects/web6401-prokhorov_sa/lab5/src/template.html" 
+            },
+            { 
+                "id": 2,
+                "title": "Image detection template", 
+                "type": "template", 
+                "url": "/python_projects/web6401-prokhorov_sa/lab5/src/template.html" 
+            }
+            ]
+        }
+  }
+}

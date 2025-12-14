@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn2TrainNN - Материалы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Learn2TrainNN</h1>
+
+    <div class="menu">
+    <a href="index.html">Главная</a>
+    <a href="materials.html">Материалы</a>
+    <a href="model_changes.html">Настройка модели</a>
+    </div>
+
+    <h2>Учебные материалы</h2>
+
+    <div class="grid-container">
+    <div class="grid-item">
+        <h3><a href="template.html">Шаблон для классификации</a></h3>
+        <p>Нейросеть для распознавания изображений.</p>
+        <span class="material-type">Код + Теория</span>
+    </div>
+    <div class="grid-item">
+        <h3><a href="template.html">Шаблон для сегментации</a></h3>
+        <p>Архитектура U-Net для сегментации.</p>
+        <span class="material-type">Код + Теория</span>
+    </div>
+    <div class="grid-item">
+        <h3><a href="template.html">Шаблон для детекции</a></h3>
+        <p>Шаблон для детекции</p>
+        <span class="material-type">Только код</span>
+    </div>
+    </div>
+
+    <h2>Материалы (из сервера)</h2>
+
+    <div id="materials-error" class="form-status error" style="display:none;"></div>
+
+    <table id="materials-table">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Тип</th>
+        <th>Ссылка</th>
+        </tr>
+    </thead>
+    <tbody id="materials-tbody"></tbody>
+    </table>
+
+    <div class="footer">
+    <p>Learn2TrainNN © 2025</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
