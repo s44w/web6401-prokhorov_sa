@@ -228,3 +228,12 @@ img {
 }
 .form-status.ok { color: var(--color-green); }
 .form-status.error { color:  var(--color-red); }
+
+.hint { 
+    display: block; 
+    font-size: 12px; 
+    margin-top: 4px; 
+    color: var(--color-gray); 
+}
+.hint.error { color: var(--color-red); }
+.hint.success { color: var(--color-green); }

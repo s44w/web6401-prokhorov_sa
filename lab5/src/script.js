@@ -20,6 +20,33 @@
 
 const hyperForm = document.getElementById('hyperparams-form');
 if (hyperForm) {
+    hyperForm.addEventListener('input', (e) => {
+        const id = e.target.id;
+        const hint = document.getElementById(id + '-hint');
+        if (!hint) return;
+
+        const val = e.target.value.trim();
+        let isValid = false;
+        let msg = '';
+
+        if (id === 'model-name') {
+            isValid = val.length > 0;
+            msg = isValid ? '' : 'Введите название';
+        } else if (id === 'learning-rate') {
+            isValid = Number(val) > 0;
+            msg = isValid ? '' : 'Должно быть > 0';
+        } else if (id === 'optimizer') {
+            isValid = val !== '';
+            msg = isValid ? '' : 'Выберите оптимизатор';
+        } else if (id === 'epochs') {
+            isValid = Number(val) > 0;
+            msg = isValid ? '' : 'Должно быть > 0';
+        }
+
+        hint.textContent = msg;
+        hint.className = isValid ? 'hint success' : 'hint error';
+    });
+
     hyperForm.addEventListener('submit', async function (event) {
         event.preventDefault();
 
