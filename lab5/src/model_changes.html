@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn2TrainNN - Настройка модели</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Learn2TrainNN</h1>
+    
+    <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="materials.html">Материалы</a>
+        <a href="model_changes.html">Настройка модели</a>
+    </div>
+    
+    <h2>Настройка гиперпараметров нейросети</h2>
+    
+    <form id="hyperparams-form" class="neural-form">
+        <div class="form-group">
+            <label for="model-name">Название модели:</label>
+            <input type="text" id="model-name" placeholder="Введите название модели" required>
+            <small class="hint" id="model-name-hint"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for="learning-rate">Learning rate:</label>
+            <input type="number" id="learning-rate" step="0.001" min="0.001" max="1" 
+                   placeholder="0.001" required>
+            <small class="hint" id="learning-rate-hint"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for="optimizer">Оптимизатор:</label>
+            <select id="optimizer" required>
+                <option value="">Выберите оптимизатор</option>
+                <option value="adam">Adam</option>
+                <option value="sgd">SGD</option>
+                <option value="rmsprop">RMSprop</option>
+            </select>
+            <small class="hint" id="optimizer-hint"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for="epochs">Количество эпох:</label>
+            <input type="number" id="epochs" min="1" max="1000" value="100" required>
+            <small class="hint" id="epochs-hint"></small>
+        </div>
+        
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">Согласен с условиями использования и обработки данных</label>
+        </div>
+        
+        <button type="submit" class="submit-btn">Запустить обучение</button>
+        <div id="form-status" class="form-status hint"></div>
+
+    </form>
+    
+    <div class="footer">
+        <p>Learn2TrainNN © 2025</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
